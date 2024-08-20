@@ -1,4 +1,4 @@
-# shell
+# Shell
 
 ### Use o comando chmod para adicionar permissões de execução ao script:
 ```
