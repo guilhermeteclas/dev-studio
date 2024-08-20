@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "*.embeddedhtml": "html",
-        "ratio": "c",
-        "random": "c",
-        "time.h": "c",
-        "typeinfo": "c"
-    }
-}
