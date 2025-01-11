@@ -2,8 +2,9 @@
 
 ### Use o comando chmod para adicionar permissões de execução ao script:
 ```
-chmod +x hello.sh
-chmod +x todo.sh
+chmod +x global-versions.sh
+chmod +x task-manager.sh
+chmod +x update-system.sh
 ```
 
 ### Comparison Operators in Shell Scripting
