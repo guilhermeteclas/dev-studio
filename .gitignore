@@ -1,4 +1,6 @@
 *.txt
+*.json
+*.pdf
 *.o
 *.out
 *.class
