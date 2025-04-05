@@ -1,10 +1,9 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <time.h>
 
-typedef struct
-{
+typedef struct {
     int id;
     char name[50];
     float balance;
@@ -29,17 +28,14 @@ void createFile(Account acc)
     FILE *file = fopen(filename, "w");
     char *now = getDateTime();
 
-    if (file != NULL)
-    {
+    if (file != NULL) {
         fprintf(file, ":: %s\n", now);
         fprintf(file, "Account ID: %d\n", acc.id);
         fprintf(file, "Account Name: %s\n", acc.name);
         fprintf(file, "Balance: %.2f\n", acc.balance);
         fprintf(file, "\n");
         fclose(file);
-    }
-    else
-    {
+    } else {
         printf("Error opening file.\n");
     }
 }
@@ -70,12 +66,9 @@ void deposit(Account *acc, float amount)
 
 void withdraw(Account *acc, float amount)
 {
-    if (amount > acc->balance)
-    {
+    if (amount > acc->balance) {
         printf("Insufficient funds!\n");
-    }
-    else
-    {
+    } else {
         acc->balance -= amount;
         printf("Withdrew: %.2f\n", amount);
 
@@ -103,19 +96,15 @@ void printAccount()
 
     FILE *file = fopen(filename, "r");
 
-    if (file != NULL)
-    {
+    if (file != NULL) {
         printf("Account found ->\n");
         char line[100];
-        while (fgets(line, sizeof(line), file) != NULL)
-        {
+        while (fgets(line, sizeof(line), file) != NULL) {
             printf("%s", line);
         }
         printf("\n");
         fclose(file);
-    }
-    else
-    {
+    } else {
         printf("Not found.\n");
     }
 }
@@ -127,8 +116,7 @@ int main()
     int isRunning = 1;
     float amount;
 
-    while (isRunning == 1)
-    {
+    while (isRunning == 1) {
         printf(":: BANK MENU ::\n");
         printf("1 - Create\n");
         printf("2 - Deposit\n");
@@ -138,8 +126,7 @@ int main()
         scanf("%d", &option);
         printf("You entered: %d\n", option);
 
-        switch (option)
-        {
+        switch (option) {
         case 1:
             createAccount(&myAccount);
             break;
