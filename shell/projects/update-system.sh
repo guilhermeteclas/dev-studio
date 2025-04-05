@@ -19,6 +19,15 @@ update_apt() {
     fi
 }
 
+update_dnf() {
+    print_header "Atualizando dnf"
+    if sudo dnf upgrade -y && sudo dnf autoremove -y; then
+        echo "DNF atualizado com sucesso."
+    else
+        echo "Erro ao atualizar o DNF." >&2
+    fi
+}
+
 update_flatpak() {
     print_header "Atualizando flatpak"
     if flatpak update -y && flatpak remove --unused --delete-data; then
@@ -29,5 +38,6 @@ update_flatpak() {
 }
 
 update_apt
+update_dnf
 update_flatpak
 
