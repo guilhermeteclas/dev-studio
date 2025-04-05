@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "prettier": "npm:prettier@^3.4.2"
+  },
+  "tasks": {
+    "bank-accounts": "gcc -o ./c/projects/bank-accounts.o ./c/projects/bank-accounts.c && ./c/projects/bank-accounts.o"
+  }
+}
