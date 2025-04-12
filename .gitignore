@@ -5,3 +5,5 @@
 *.out
 *.class
 global-versions.md
+*venv
+*-env

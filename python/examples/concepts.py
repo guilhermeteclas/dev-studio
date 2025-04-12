@@ -17,22 +17,24 @@ elif age == 18:
     print("You just became an adult.")
 else:
     print("You are an adult.")
-    
 
 # Example of a for loop
 for i in range(5):  # range(5) generates numbers from 0 to 4
     print(i)
-    
+
 # Example of a while loop
 counter = 0
 
 while counter < 5:
     print(counter)
     counter += 1  # Increment the counter
-    
+
 # Example of a function
+
+
 def greet(name):
     return f"Hello, {name}!"
+
 
 # Calling the function
 message = greet(name)
@@ -48,11 +50,14 @@ class Person:
     def introduce(self):
         return f"My name is {self.name} and I am {self.age} years old."
 
+
 # Creating an object of the Person class
 person1 = Person("Carlos", 30)
 print(person1.introduce())
 
 # Defining a class
+
+
 class Animal:
     def __init__(self, name, species):
         self.name = name
@@ -62,9 +67,12 @@ class Animal:
         return f"{self.name} says {sound}!"
 
 # Function to list animals
+
+
 def list_animals(animals):
     for animal in animals:
         print(f"{animal.name} is a {animal.species}")
+
 
 # Creating objects
 dog = Animal("Rex", "Dog")
