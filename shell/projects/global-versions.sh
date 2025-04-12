@@ -1,7 +1,6 @@
 #!/bin/bash
 
-output_file="global-versions.md"
-> "$output_file"
+output_file="global-versions.md" > "$output_file"
 
 print_header() {
     local title=$1

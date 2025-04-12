@@ -67,7 +67,7 @@ list_txt_files() {
 }
 
 choose_file(){
-  read -p "Enter the file name: " FILE
+  read -r -p "Enter the file name: " FILE
 }
 
 # Main menu
