@@ -20,23 +20,23 @@ add_task() {
   if [ ! -f "$FILE" ]; then
     touch "$FILE.txt"
   fi
-  
+
   echo "Enter the task description:"
-  read task
+  read -r task
   echo "$task" >>"$FILE"
   echo "Task added."
 }
 
 remove_task() {
-  echo $FILE
+  echo "$FILE"
 
   if [ -s "$FILE" ]; then
     list_tasks
 
     echo -e "\nEnter the line number of the task to remove:"
-    read line_number
+    read -r line_number
 
-    if [ "$line_number" -gt 0 ] && [ "$line_number" -le $(wc -l <"$FILE") ]; then
+    if [ "$line_number" -gt 0 ] && [ "$line_number" -le "$(wc -l <"$FILE")" ]; then
       sed -i "${line_number}d" "$FILE"
       echo "Task removed."
     else
@@ -74,9 +74,9 @@ choose_file(){
 while true; do
 
   if [ -z "$FILE" ]; then
-    list_txt_files $1
-    echo -n -e $ARROW_ICON " Choose an file:\n"
-    read FILE
+    list_txt_files "$1"
+    echo -n -e "$ARROW_ICON" " Choose an file:\n"
+    read -r FILE
     FILE="${FILE}.txt"
 
     if [ ! -f "$FILE" ]; then
@@ -84,7 +84,7 @@ while true; do
       #touch "${FILE}.txt"
     fi
 
-    echo $FILE
+    echo "$FILE"
   else
 
     echo ""
@@ -99,10 +99,10 @@ while true; do
     echo "|--------------------|"
     echo ""
 
-    echo $FILE_ICON $FILE
+    echo "$FILE_ICON" "$FILE"
 
-    echo -n -e $ARROW_ICON " Choose an option [1-4]:\n"
-    read option
+    echo -n -e "$ARROW_ICON" "Choose an option [1-4]:\n"
+    read -r option
 
     case $option in
     1 | "list")
