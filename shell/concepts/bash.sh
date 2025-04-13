@@ -34,7 +34,7 @@ echo ""
 echo "View file?"
 echo "1 - Yes"
 echo "2 - No"
-read input
+read -r input
 
 if [ "$input" -eq 1 ]; then
     echo "------"
