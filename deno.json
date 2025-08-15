@@ -3,6 +3,9 @@
     "prettier": "npm:prettier@^3.4.2"
   },
   "tasks": {
-    "bank-accounts": "gcc -o ./c/projects/bank-accounts.o ./c/projects/bank-accounts.c && ./c/projects/bank-accounts.o"
+    "bank-accounts": "gcc -o ./c/projects/bank-accounts.o ./c/projects/bank-accounts.c && ./c/projects/bank-accounts.o",
+    "manager": "./shell/scripts/task-manager.sh",
+    "versions": "./shell/scripts/global-versions.sh",
+    "update-system": "./shell/scripts/update-system.sh"
   }
 }
